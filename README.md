@@ -29,12 +29,12 @@ The system includes:
 - The zpaq-backup.sh script gets a list of directories (bases) from file "dbsList.txt"
 - Actions are performed for each directory:
   - File "checkMarker.txt" containing the current date in format **YYYY-mm-dd** is written to the directory
-  - Directory is archived along the path dbs_backup/${dbName}/ with the archive name ${dbName}_???.zpaq, where ??? - sequence number of the archive (001 - full archive, the following ones are incremental)
+  - Directory is archived along the path dbs_backup/{dbName}/ with the archive name {dbName}_???.zpaq, where ??? - sequence number of the archive (001 - full archive, the following ones are incremental)
   - Upon completion of the archiving, the status of the operation is written to the "dbArchStatus" variable (**-ARCH_OK-** | **-ARCH_FAIL-**)
   - The file checkMarker.txt is removed from the directory
-  - The archive is extracted along the path dbs_extracted_for_check/${dbName}
+  - The archive is extracted along the path dbs_extracted_for_check/{dbName}
   - Upon completion of the extraction, the status of the operation is written to the dbExtrStatus variable (**-EXTRACT_OK-** | **-EXTRACT_FAIL-**)
-  - The dbs_extracted_for_check/${dbName}/checkMarker.txt file is checked to see if it contains the current date in **YYYY-mm-dd** format. As a result, dbCheckMarkerStatus is set to (**-CHECKMARKER_OK-** | **-CHECKMARKER_FAIL-**)
+  - The dbs_extracted_for_check/{dbName}/checkMarker.txt file is checked to see if it contains the current date in **YYYY-mm-dd** format. As a result, dbCheckMarkerStatus is set to (**-CHECKMARKER_OK-** | **-CHECKMARKER_FAIL-**)
   - A line like this is written to the backup logging file "dbs_log/dbsBackupLog.txt":
     ```
     /tmp/dbs/!dbName! : -ARCH_OK- -EXTRACT_OK- -CHECKMARKER_OK-
