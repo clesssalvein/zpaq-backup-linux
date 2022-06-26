@@ -1,0 +1,2 @@
+/root/dbs/db01
+/root/dbs/dir02
