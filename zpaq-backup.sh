@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ###
-# BACKUP-ZPAQ - archiving multiple directories with unpacking for checking
+# ZPAQ-BACKUP - archiving multiple directories with unpacking for checking
 # by Cless
 #
 # Requirements:
