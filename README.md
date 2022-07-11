@@ -23,7 +23,7 @@ The system includes:
   - Run "zpaq-backup.sh"
 
 # Work algorithm
-- The zpaq-backup.sh script gets a list of directories (bases) from file "dbsList.txt"
+- **zpaq-backup.sh** script gets a list of directories (bases) from file "dbsList.txt"
 - Actions are performed for each directory:
   - File "checkMarker.txt" containing the current date in format **YYYY-mm-dd** is written to the directory
   - Directory is archived along the path dbs_backup/{dbName}/ with the archive name {dbName}_???.zpaq, where ??? - sequence number of the archive (001 - full archive, the following ones are incremental)
